@@ -1,17 +1,12 @@
-resources:
-  repositories:
-  - repository: hive-net  
-    endpoint: hive-net
-    type: git
-    name: hive-net  
-    ref: master
- 
 trigger:
-- none
+- master
  
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'linux-latest'
  
 steps:
 - checkout: self
-- checkout:  hive-net 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
