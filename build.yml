@@ -1,7 +1,7 @@
 resources:
   repositories:
   - repository: hive-net  
-    endpoint: ive-net-gitlab
+    endpoint: hive-net-gitlab
     type: git
     name: hive-net  
     ref: master
