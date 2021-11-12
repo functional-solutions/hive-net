@@ -1,0 +1,17 @@
+resources:
+  repositories:
+  - repository: hive-net  
+    endpoint: hive-net
+    type: git
+    name: hive-net  
+    ref: master
+ 
+trigger:
+- none
+ 
+pool:
+  vmImage: 'windows-latest'
+ 
+steps:
+- checkout: self
+- checkout:  hive-net 
