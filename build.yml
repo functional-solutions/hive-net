@@ -1,13 +1,9 @@
 resources:
   repositories:
   - repository: hive-net  
-    endpoint: Repos - MSFTPlayground
+    endpoint: ive-net-gitlab
     type: git
-    name: msft-ccoe/msft-ccoe
-    ref: master
-  - repository: hive-net 
-    name: Azure DevOps Discovery/Governance
-    type: git
+    name: hive-net  
     ref: master
  
 trigger:
@@ -18,6 +14,4 @@ pool:
  
 steps:
 - checkout: self
-- checkout: DifferentOrganization
-- checkout: SameOrganization
-- script: dir $(Build.SourcesDirectory)
+- checkout:  hive-net 
