@@ -10,3 +10,9 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.csproj'
+    arguments: '-o $(Build.ArtifactStagingDirectory)'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'nuget'
+    publishLocation: 'pipeline'
