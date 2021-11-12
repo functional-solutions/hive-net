@@ -16,3 +16,9 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'nuget'
     publishLocation: 'pipeline'
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'nuget-hive-net'
