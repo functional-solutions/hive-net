@@ -10,7 +10,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Version>0.1.1</Version>
     <Authors>Arcange, Asassyn</Authors>
     <PackageProjectUrl>https://gitlab.syncad.com/hive/hive-net</PackageProjectUrl>
   </PropertyGroup>
