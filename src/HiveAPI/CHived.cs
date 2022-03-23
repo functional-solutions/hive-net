@@ -76,6 +76,8 @@ namespace HiveAPI
 		#endregion
 
 		#region public Methods
+		private CtransactionData create_transaction(Object[] aOperations, string[] astrPrivateKeys)
+			=> CreateTransaction(aOperations, astrPrivateKeys);
 
 		public string broadcast_transaction(Object[] operations, string[] keys)
 		{
