@@ -28,7 +28,7 @@ namespace HiveAPI
 		#endregion
 
 		#region private Methods
-		private class CTransaction
+		public class CTransaction
 		{
 			public UInt16 ref_block_num;
 			public UInt32 ref_block_prefix;
@@ -37,7 +37,7 @@ namespace HiveAPI
 			public Object[] extensions = { };
 			public string[] signatures = { };
 		}
-		private class CtransactionData
+		public class CtransactionData
 		{
 			public CTransaction tx;
 			public string txid;
