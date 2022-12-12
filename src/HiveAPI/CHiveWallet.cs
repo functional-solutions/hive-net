@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 
 namespace HiveAPI
 {
-	class CHiveWallet : CHiveAPI
+	public sealed class CHiveWallet : CHiveAPI
 	{
 		#region Constructors
 		public CHiveWallet(HttpClient oHttpClient, string strHostname = "127.0.0.1", ushort nPort = 8091) : base(oHttpClient, string.Format("http://{0}:{1}", strHostname, nPort))
